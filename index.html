@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATAWORK — Asesor Comercial | Postula Ahora</title>
+<meta name="description" content="Trabaja como Asesor Comercial en Datawork Chimbote. Sueldo fijo S/1,250 + bonos + comisiones ilimitadas. Sin experiencia necesaria. Postula hoy.">
+<meta name="theme-color" content="#050A18">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  --primary: #0066FF;
+  --neon: #00A3FF;
+  --cyan: #00D4FF;
+  --bg-deep: #050A18;
+  --navbar: #0A1628;
+  --card-navy: #0D1B30;
+  --card-border: rgba(0, 102, 255, 0.15);
+  --card-border-hover: rgba(0, 102, 255, 0.4);
+  --blue-glow: rgba(0, 102, 255, 0.25);
+  --cyan-glow: rgba(0, 163, 255, 0.15);
+  --light-bg: #F0F4FA;
+  --white: #FFFFFF;
+  --card-border-light: #E2E8F0;
+  --text-navy: #0A1628;
+  --text-body: #475569;
+  --text-secondary: #64748B;
+  --gray-300: #CBD5E1;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --success: #00C853;
+  --warning: #FFB300;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; font-family: var(--font-body); }
+ul { list-style: none; }
+
+/* ============================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   SECTION 1: URGENCY BANNER
+   ============================================ */
+.urgency-banner {
+  background: linear-gradient(90deg, var(--primary), var(--neon), var(--primary));
+  background-size: 200% 100%;
+  animation: bannerSlide 4s linear infinite;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  z-index: 100;
+}
+@keyframes bannerSlide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.urgency-banner span {
+  animation: bannerPulse 2s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes bannerPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ============================================
+   SECTION 2: NAVBAR
+   ============================================ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--navbar);
+  border-bottom: 1px solid var(--card-border);
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-logo img {
+  height: 44px;
+  width: auto;
+  border-radius: 12px;
+  filter: none !important;
+}
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.nav-logo-text .data { color: var(--neon); }
+.nav-logo-text .work { color: var(--white); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-300);
+  transition: color 0.3s;
+  letter-spacing: 0.5px;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.nav-cta:hover {
+  background: var(--neon);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px var(--blue-glow);
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 10, 24, 0.97);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.mobile-menu.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-300);
+  transition: color 0.3s;
+}
+.mobile-menu a:hover { color: var(--white); }
+.mobile-menu .nav-cta {
+  font-size: 16px;
+  padding: 14px 40px;
+}
+
+/* ============================================
+   SECTION 3: HERO
+   ============================================ */
+.hero {
+  background: var(--bg-deep);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 40px 80px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -300px;
+  right: -200px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 163, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-grid-pattern {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 102, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.hero-left {}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid var(--card-border);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neon);
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+.hero-badge svg { flex-shrink: 0; }
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.hero h1 .gradient-text {
+  background: linear-gradient(135deg, var(--neon), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--gray-300);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 500px;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 30px var(--blue-glow);
+}
+.hero-cta:hover {
+  background: var(--neon);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(0, 102, 255, 0.4);
+}
+.hero-cta svg { flex-shrink: 0; }
+
+/* Hero Card */
+.hero-card {
+  background: rgba(13, 27, 48, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 36px;
+  position: relative;
+}
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), transparent, rgba(0, 163, 255, 0.1));
+  z-index: -1;
+}
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--card-border);
+}
+.hero-card-header img {
+  height: 70px;
+  width: auto;
+  border-radius: 12px;
+  filter: none !important;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.hero-card-title .data { color: var(--neon); }
+.hero-card-title .work { color: var(--white); }
+.hero-card-subtitle {
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+.hero-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.hero-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(0, 102, 255, 0.05);
+  border: 1px solid rgba(0, 102, 255, 0.08);
+  transition: all 0.3s;
+}
+.hero-benefit:hover {
+  border-color: var(--card-border-hover);
+  background: rgba(0, 102, 255, 0.08);
+}
+.hero-benefit-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0, 102, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero-benefit-icon svg { width: 20px; height: 20px; }
+.hero-benefit-label {
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-bottom: 2px;
+}
+.hero-benefit-value {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* ============================================
+   SECTION 4: STATS BAR
+   ============================================ */
+.stats-bar {
+  background: var(--light-bg);
+  padding: 60px 40px;
+}
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ============================================
+   SECTION 5: BENEFITS
+   ============================================ */
+.section-light {
+  background: var(--light-bg);
+  padding: 80px 40px;
+}
+.section-white {
+  background: var(--white);
+  padding: 80px 40px;
+}
+.section-dark {
+  background: var(--bg-deep);
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.section-dark::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.section-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.section-label-light { color: var(--neon); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--text-navy);
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+.section-title-light { color: var(--white); }
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+.section-subtitle-light { color: var(--gray-400); }
+
+/* Benefits Cards */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.benefit-card {
+  background: var(--white);
+  border: 1px solid var(--card-border-light);
+  border-radius: 16px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, var(--primary), var(--neon));
+  border-radius: 0 0 4px 4px;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.benefit-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 102, 255, 0.08);
+}
+.benefit-card:hover::before { height: 100%; }
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 102, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.benefit-icon svg { width: 24px; height: 24px; color: var(--primary); }
+.benefit-card h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-navy);
+  margin-bottom: 8px;
+}
+.benefit-card p {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* ============================================
+   SECTION 6: WHAT YOU'LL DO (FUNCIONES)
+   ============================================ */
+.funciones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.funcion-card {
+  background: var(--white);
+  border: 1px solid var(--card-border-light);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: all 0.3s;
+}
+.funcion-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 102, 255, 0.08);
+}
+.funcion-number {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(0, 102, 255, 0.08);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.funcion-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 102, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.funcion-icon svg { width: 24px; height: 24px; color: var(--primary); }
+.funcion-card h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-navy);
+  margin-bottom: 8px;
+}
+.funcion-card p {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* ============================================
+   SECTION 7: WHY WORK WITH US
+   ============================================ */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.why-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.why-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: var(--text-navy);
+  font-weight: 500;
+}
+.why-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(0, 102, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.why-check svg { width: 16px; height: 16px; color: var(--primary); }
+.why-photo {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+.why-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   SECTION 8: COMMISSION CALCULATOR
+   ============================================ */
+.calculator-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.calculator-card {
+  background: rgba(13, 27, 48, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 48px;
+}
+.calc-slider-area {
+  margin-bottom: 40px;
+}
+.calc-slider-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.calc-slider-label span {
+  font-size: 14px;
+  color: var(--gray-400);
+}
+.calc-slider-value {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.calc-slider-value small {
+  font-size: 18px;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--neon));
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px var(--blue-glow);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px var(--blue-glow);
+  cursor: pointer;
+  border: none;
+}
+.calc-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(0, 102, 255, 0.05);
+  border: 1px solid rgba(0, 102, 255, 0.08);
+}
+.calc-row-label {
+  font-size: 14px;
+  color: var(--gray-300);
+}
+.calc-row-value {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+.calc-total {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(0, 163, 255, 0.1));
+  border: 1px solid var(--card-border-hover);
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+}
+.calc-total-label {
+  font-size: 13px;
+  color: var(--gray-400);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.calc-total-value {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--neon), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   SECTION 9: JOB OFFER
+   ============================================ */
+.offer-card {
+  background: var(--white);
+  border: 1px solid var(--card-border-light);
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.offer-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+.offer-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--light-bg);
+}
+.offer-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0, 102, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.offer-item-icon svg { width: 20px; height: 20px; color: var(--primary); }
+.offer-item-text h4 {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.offer-item-text p {
+  font-size: 15px;
+  color: var(--text-navy);
+  font-weight: 600;
+}
+.offer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 18px 40px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.2);
+}
+.offer-cta:hover {
+  background: var(--neon);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(0, 102, 255, 0.3);
+}
+
+/* ============================================
+   SECTION 10: APPLICATION PROCESS
+   ============================================ */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 44px;
+  left: calc(16.67% + 30px);
+  right: calc(16.67% + 30px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--neon), var(--primary));
+  z-index: 0;
+}
+.process-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.process-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--card-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s;
+}
+.process-icon svg { width: 36px; height: 36px; color: var(--primary); }
+.process-step:hover .process-icon {
+  border-color: var(--primary);
+  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.15);
+}
+.process-step-num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.process-step h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-navy);
+  margin-bottom: 8px;
+}
+.process-step p {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   SECTION 11: PROFILE
+   ============================================ */
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.profile-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 100px;
+  background: var(--white);
+  border: 1px solid var(--card-border-light);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-navy);
+  transition: all 0.3s;
+}
+.profile-tag svg { width: 18px; height: 18px; color: var(--primary); }
+.profile-tag:hover {
+  border-color: var(--primary);
+  background: rgba(0, 102, 255, 0.04);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   SECTION 12: UBICACION (MAP)
+   ============================================ */
+.map-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.map-info h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-navy);
+  margin-bottom: 16px;
+}
+.map-address {
+  font-size: 16px;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.map-ref {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.map-schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-body);
+  margin-bottom: 10px;
+}
+.map-schedule-item svg { width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; }
+.map-embed {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+.map-embed iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+/* ============================================
+   SECTION 13: FINAL CTA
+   ============================================ */
+.final-cta {
+  background: linear-gradient(135deg, var(--bg-deep) 0%, #0A1628 50%, var(--bg-deep) 100%);
+  padding: 100px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+.final-cta p {
+  font-size: 18px;
+  color: var(--gray-400);
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+.final-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 20px 48px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 30px var(--blue-glow);
+  position: relative;
+  z-index: 2;
+  animation: ctaPulse 2.5s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 30px var(--blue-glow); }
+  50% { box-shadow: 0 4px 60px rgba(0, 102, 255, 0.5); }
+}
+.final-cta-btn:hover {
+  background: var(--neon);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   SECTION 14: FOOTER
+   ============================================ */
+.footer {
+  background: var(--bg-deep);
+  border-top: 1px solid var(--card-border);
+  padding: 60px 40px 30px;
+}
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-logo img {
+  height: 40px;
+  width: auto;
+  border-radius: 12px;
+  filter: none !important;
+}
+.footer-logo-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.footer-logo-text .data { color: var(--neon); }
+.footer-logo-text .work { color: var(--white); }
+.footer-tagline {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  max-width: 250px;
+}
+.footer h4 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-links a {
+  font-size: 14px;
+  color: var(--gray-500);
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--neon); }
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--gray-500);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.footer-contact-item svg { width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; margin-top: 2px; }
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.footer-social a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.footer-social svg { width: 18px; height: 18px; color: var(--white); }
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--card-border);
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+/* ============================================
+   SECTION 15: CHATBOT
+   ============================================ */
+.chat-trigger {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--neon));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.4);
+  z-index: 2000;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+.chat-trigger:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 30px rgba(0, 102, 255, 0.6);
+}
+.chat-trigger svg { width: 28px; height: 28px; color: var(--white); }
+.chat-panel {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 400px;
+  height: 540px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chat-panel.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+.chat-header {
+  background: var(--navbar);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.chat-header img {
+  height: 32px;
+  width: auto;
+  border-radius: 12px;
+  filter: none !important;
+}
+.chat-header-info {
+  flex: 1;
+}
+.chat-header-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+.chat-header-title .data { color: var(--neon); }
+.chat-header-title .work { color: var(--white); }
+.chat-header-sub {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+.chat-close {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  padding: 4px;
+  transition: color 0.3s;
+}
+.chat-close:hover { color: var(--white); }
+.chat-close svg { width: 20px; height: 20px; }
+.chat-messages {
+  flex: 1;
+  background: var(--light-bg);
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.chat-msg {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: msgSlide 0.3s ease-out;
+}
+@keyframes msgSlide {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.chat-msg.bot {
+  background: var(--white);
+  color: var(--text-navy);
+  border: 1px solid var(--card-border-light);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.chat-msg.user {
+  background: var(--primary);
+  color: var(--white);
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+.chat-msg.system {
+  background: rgba(0, 200, 83, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(0, 200, 83, 0.2);
+  align-self: flex-start;
+  font-weight: 500;
+}
+.chat-msg a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.chat-msg.user a {
+  color: var(--white);
+}
+.chat-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.chat-option-btn {
+  background: rgba(0, 102, 255, 0.06);
+  border: 1px solid var(--card-border-light);
+  color: var(--primary);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  transition: all 0.3s;
+}
+.chat-option-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+.typing-indicator {
+  display: flex;
+  gap: 5px;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1px solid var(--card-border-light);
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+  max-width: 70px;
+}
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gray-400);
+  animation: typingPulse 1.4s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typingPulse {
+  0%, 60%, 100% { opacity: 0.3; transform: scale(0.8); }
+  30% { opacity: 1; transform: scale(1); }
+}
+.chat-input-area {
+  padding: 16px;
+  background: var(--white);
+  border-top: 1px solid var(--card-border-light);
+  display: flex;
+  gap: 10px;
+}
+.chat-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--card-border-light);
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.3s;
+  color: var(--text-navy);
+}
+.chat-input::placeholder { color: var(--gray-400); }
+.chat-input:focus { border-color: var(--primary); }
+.chat-send {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  flex-shrink: 0;
+  border: none;
+}
+.chat-send:hover { background: var(--neon); }
+.chat-send svg { width: 20px; height: 20px; color: var(--white); }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; gap: 40px; }
+  .hero-card { max-width: 600px; }
+  .benefits-grid, .funciones-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .map-container { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .urgency-banner { display: none; }
+  .navbar { padding: 0 20px; height: 60px; }
+  .nav-logo img { height: 36px; }
+  .nav-logo-text { font-size: 18px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding: 60px 20px; min-height: auto; }
+  .hero h1 { font-size: 32px; }
+  .hero-subtitle { font-size: 16px; }
+  .hero-benefits { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hero-benefit { padding: 12px; }
+  .hero-card { padding: 24px; }
+  .hero-card-header img { height: 50px; }
+  .hero-card-title { font-size: 22px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .stat-number { font-size: 32px; }
+  .section-light, .section-white, .section-dark { padding: 60px 20px; }
+  .benefits-grid, .funciones-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 32px; }
+  .offer-items { grid-template-columns: 1fr; }
+  .offer-card { padding: 32px 24px; }
+  .process-steps { grid-template-columns: 1fr; gap: 40px; }
+  .process-steps::before { display: none; }
+  .calculator-card { padding: 32px 24px; }
+  .calc-slider-value { font-size: 36px; }
+  .final-cta { padding: 60px 20px; }
+  .footer { padding: 40px 20px 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .chat-panel {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+  }
+}
+@media (max-width: 480px) {
+  .hero-benefits { grid-template-columns: 1fr; }
+  .hero-cta { width: 100%; justify-content: center; padding: 16px 24px; }
+  .profile-tags { gap: 10px; }
+  .profile-tag { padding: 10px 18px; font-size: 13px; }
+  .final-cta-btn { padding: 18px 32px; font-size: 16px; }
+  .calc-total-value { font-size: 34px; }
+}
+@media (max-width: 375px) {
+  .hero h1 { font-size: 28px; }
+  .hero-card-title { font-size: 18px; }
+  .stat-number { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     SECTION 1: URGENCY BANNER
+     ============================================ -->
+<div class="urgency-banner">
+  <span>VACANTES LIMITADAS — Postula hoy y empieza a ganar esta semana</span>
+</div>
+
+<!-- ============================================
+     SECTION 2: NAVBAR
+     ============================================ -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="logo.png" alt="Datawork Logo">
+    <span class="nav-logo-text"><span class="data">DATA</span><span class="work">WORK</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="#beneficios">Beneficios</a>
+    <a href="#funciones">Funciones</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#proceso">Proceso</a>
+    <a href="https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork" target="_blank" class="nav-cta">POSTULA AHORA</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#beneficios" class="mobile-link">Beneficios</a>
+  <a href="#funciones" class="mobile-link">Funciones</a>
+  <a href="#oferta" class="mobile-link">Oferta</a>
+  <a href="#proceso" class="mobile-link">Proceso</a>
+  <a href="https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork" target="_blank" class="nav-cta">POSTULA AHORA</a>
+</div>
+
+<!-- ============================================
+     SECTION 3: HERO
+     ============================================ -->
+<section class="hero">
+  <div class="hero-grid-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Vacantes abiertas — Chimbote
+      </div>
+      <h1 class="reveal">CONECTA CON<br><span class="gradient-text">TU FUTURO</span></h1>
+      <p class="hero-subtitle reveal">Gana hasta S/1,450 fijos + comisiones ilimitadas como Asesor Comercial. Sin experiencia necesaria. Capacitacion pagada. Tardes 100% libres.</p>
+      <a href="https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork" target="_blank" class="hero-cta reveal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Postula por WhatsApp
+      </a>
+    </div>
+    <div class="hero-card reveal">
+      <div class="hero-card-header">
+        <img src="logo.png" alt="Datawork Logo">
+        <div>
+          <div class="hero-card-title"><span class="data">DATA</span><span class="work">WORK</span></div>
+          <div class="hero-card-subtitle">Asesor Comercial — Call Center</div>
+        </div>
+      </div>
+      <div class="hero-benefits">
+        <div class="hero-benefit">
+          <div class="hero-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div>
+            <div class="hero-benefit-label">Sueldo base</div>
+            <div class="hero-benefit-value">S/1,250</div>
+          </div>
+        </div>
+        <div class="hero-benefit">
+          <div class="hero-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="hero-benefit-label">Horario</div>
+            <div class="hero-benefit-value">Mananas</div>
+          </div>
+        </div>
+        <div class="hero-benefit">
+          <div class="hero-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <div>
+            <div class="hero-benefit-label">Capacitacion</div>
+            <div class="hero-benefit-value">Pagada</div>
+          </div>
+        </div>
+        <div class="hero-benefit">
+          <div class="hero-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div>
+            <div class="hero-benefit-label">Comisiones</div>
+            <div class="hero-benefit-value">Ilimitadas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 4: STATS BAR
+     ============================================ -->
+<section class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="50" data-prefix="+">0</div>
+      <div class="stat-label">Asesores activos</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="1450" data-prefix="S/">0</div>
+      <div class="stat-label">Ingreso total garantizado</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Tardes libres</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Capacitacion pagada</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 5: BENEFITS
+     ============================================ -->
+<section class="section-light" id="beneficios">
+  <div class="container">
+    <div class="section-label reveal">BENEFICIOS</div>
+    <h2 class="section-title reveal">Lo que Datawork te ofrece</h2>
+    <p class="section-subtitle reveal">Beneficios reales desde el primer dia. Sin letra chica.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3>Sueldo fijo S/1,250</h3>
+        <p>Ingreso base garantizado mensual. Estabilidad financiera desde el dia uno.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Horario de mananas</h3>
+        <p>Lunes a viernes 5:00 AM - 2:00 PM. Sabados hasta 10:30 AM. Tardes 100% libres.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Bono puntualidad S/100</h3>
+        <p>Recompensa adicional por cumplimiento de horario. Tu compromiso vale.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>Bono productividad S/100</h3>
+        <p>Incentivo mensual por cumplimiento de metas y metricas de rendimiento.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Comisiones ilimitadas</h3>
+        <p>Sin techo de ganancias. Desde la venta 21, cada cierre suma a tu bolsillo.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h3>Capacitacion pagada</h3>
+        <p>5 dias de formacion especializada en el sector energetico. 100% remunerada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 6: WHAT YOU'LL DO (FUNCIONES)
+     ============================================ -->
+<section class="section-white" id="funciones">
+  <div class="container">
+    <div class="section-label reveal">FUNCIONES</div>
+    <h2 class="section-title reveal">Lo que haras cada dia</h2>
+    <p class="section-subtitle reveal">Tu rol como Asesor Comercial en Datawork.</p>
+    <div class="funciones-grid">
+      <div class="funcion-card reveal">
+        <div class="funcion-number">01</div>
+        <div class="funcion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3>Contactar clientes potenciales</h3>
+        <p>Llamadas a clientes en Espana mediante base de datos asignada por la empresa.</p>
+      </div>
+      <div class="funcion-card reveal">
+        <div class="funcion-number">02</div>
+        <div class="funcion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3>Ofrecer y explicar servicios</h3>
+        <p>Presentar servicios de luz y gas de manera clara y persuasiva al cliente.</p>
+      </div>
+      <div class="funcion-card reveal">
+        <div class="funcion-number">03</div>
+        <div class="funcion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Gestionar objeciones</h3>
+        <p>Resolver dudas y cerrar ventas de forma efectiva con tecnicas de negociacion.</p>
+      </div>
+      <div class="funcion-card reveal">
+        <div class="funcion-number">04</div>
+        <div class="funcion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Registrar informacion</h3>
+        <p>Documentar correctamente los datos del cliente y el proceso de venta en el sistema.</p>
+      </div>
+      <div class="funcion-card reveal">
+        <div class="funcion-number">05</div>
+        <div class="funcion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </div>
+        <h3>Cumplir KPIs</h3>
+        <p>Alcanzar los indicadores de productividad y calidad establecidos cada mes.</p>
+      </div>
+      <div class="funcion-card reveal">
+        <div class="funcion-number">06</div>
+        <div class="funcion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Capacitaciones continuas</h3>
+        <p>Participar en reuniones de seguimiento y formacion continua del equipo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 7: WHY WORK WITH US
+     ============================================ -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-label reveal">POR QUE DATAWORK</div>
+    <h2 class="section-title reveal">Mas que un empleo, una oportunidad real</h2>
+    <p class="section-subtitle reveal">Todo lo que necesitas para crecer profesionalmente.</p>
+    <div class="why-grid">
+      <div class="why-checklist">
+        <div class="why-item reveal">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Contrato en planilla desde el primer dia
+        </div>
+        <div class="why-item reveal">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Bonos mensuales por puntualidad y productividad
+        </div>
+        <div class="why-item reveal">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Capacitacion pagada y especializada
+        </div>
+        <div class="why-item reveal">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Linea de carrera y crecimiento real
+        </div>
+        <div class="why-item reveal">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Ambiente dinamico y equipo joven
+        </div>
+        <div class="why-item reveal">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Equipo de trabajo proporcionado por la empresa
+        </div>
+      </div>
+      <div class="why-photo reveal">
+        <img src="team.jpg" alt="Equipo Datawork en accion">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 8: COMMISSION CALCULATOR
+     ============================================ -->
+<section class="section-dark" id="calculadora">
+  <div class="container">
+    <div class="section-label section-label-light reveal" style="text-align:center">CALCULADORA</div>
+    <h2 class="section-title section-title-light reveal" style="text-align:center">Calcula tu ingreso mensual</h2>
+    <p class="section-subtitle section-subtitle-light reveal" style="text-align:center;margin-left:auto;margin-right:auto">Mueve el slider y descubre cuanto puedes ganar como Asesor Comercial.</p>
+    <div class="calculator-wrapper">
+      <div class="calculator-card reveal">
+        <div class="calc-slider-area">
+          <div class="calc-slider-label">
+            <span>Ventas mensuales</span>
+            <span>0 — 60</span>
+          </div>
+          <div class="calc-slider-value"><span id="calcVentas">25</span> <small>ventas</small></div>
+          <input type="range" id="calcSlider" min="0" max="60" value="25">
+        </div>
+        <div class="calc-breakdown">
+          <div class="calc-row">
+            <span class="calc-row-label">Sueldo base</span>
+            <span class="calc-row-value" id="calcBase">S/1,250</span>
+          </div>
+          <div class="calc-row">
+            <span class="calc-row-label">Bono puntualidad</span>
+            <span class="calc-row-value" id="calcPunt">S/100</span>
+          </div>
+          <div class="calc-row">
+            <span class="calc-row-label">Bono productividad</span>
+            <span class="calc-row-value" id="calcProd">S/100</span>
+          </div>
+          <div class="calc-row">
+            <span class="calc-row-label">Comisiones</span>
+            <span class="calc-row-value" id="calcComm">S/50</span>
+          </div>
+        </div>
+        <div class="calc-total">
+          <div class="calc-total-label">INGRESO TOTAL ESTIMADO</div>
+          <div class="calc-total-value" id="calcTotal">S/1,500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 9: JOB OFFER
+     ============================================ -->
+<section class="section-white" id="oferta">
+  <div class="container">
+    <div class="section-label reveal" style="text-align:center">OFERTA LABORAL</div>
+    <h2 class="section-title reveal" style="text-align:center">Detalle del puesto</h2>
+    <p class="section-subtitle reveal" style="text-align:center;margin-left:auto;margin-right:auto">Todo lo que incluye la posicion de Asesor Comercial en Datawork.</p>
+    <div class="offer-card reveal">
+      <div class="offer-items">
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Sueldo base</h4>
+            <p>S/1,250 mensual</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Bono puntualidad</h4>
+            <p>S/100 mensual</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Bono productividad</h4>
+            <p>S/100 mensual</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Comisiones</h4>
+            <p>Ilimitadas por tramos</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Horario L-V</h4>
+            <p>5:00 AM — 2:00 PM</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Horario sabados</h4>
+            <p>5:00 AM — 10:30 AM</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Capacitacion</h4>
+            <p>5 dias pagada</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="offer-item-text">
+            <h4>Equipo</h4>
+            <p>PC + sistema + base de datos</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork" target="_blank" class="offer-cta">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quiero postular ahora — WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 10: APPLICATION PROCESS
+     ============================================ -->
+<section class="section-light" id="proceso">
+  <div class="container">
+    <div class="section-label reveal" style="text-align:center">PROCESO</div>
+    <h2 class="section-title reveal" style="text-align:center">3 pasos para empezar</h2>
+    <p class="section-subtitle reveal" style="text-align:center;margin-left:auto;margin-right:auto">Postula hoy y comienza a trabajar esta semana.</p>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <div class="process-step-num">PASO 01</div>
+        <h3>Escribenos por WhatsApp</h3>
+        <p>Envía un mensaje con tu interes en la vacante. Respuesta inmediata.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="process-step-num">PASO 02</div>
+        <h3>Entrevista presencial</h3>
+        <p>Coordinamos una entrevista en nuestra oficina en Chimbote. Trae tu DNI.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <div class="process-step-num">PASO 03</div>
+        <h3>Capacitacion pagada</h3>
+        <p>5 dias de formacion especializada. Empiezas a ganar desde el primer dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 11: PROFILE
+     ============================================ -->
+<section class="section-white">
+  <div class="container" style="text-align:center">
+    <div class="section-label reveal">PERFIL</div>
+    <h2 class="section-title reveal">¿Eres tu?</h2>
+    <p class="section-subtitle reveal" style="margin-left:auto;margin-right:auto">No necesitas experiencia previa. Solo necesitas actitud y ganas.</p>
+    <div class="profile-tags">
+      <div class="profile-tag reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Actitud positiva
+      </div>
+      <div class="profile-tag reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Comunicacion efectiva
+      </div>
+      <div class="profile-tag reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        Orientado a resultados
+      </div>
+      <div class="profile-tag reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Compromiso
+      </div>
+      <div class="profile-tag reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Proactivo
+      </div>
+      <div class="profile-tag reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Experiencia NO requerida
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 12: UBICACION (MAP)
+     ============================================ -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-label reveal">UBICACION</div>
+    <h2 class="section-title reveal">Encuentranos</h2>
+    <div class="map-container">
+      <div class="map-info reveal">
+        <h3>Oficina Datawork — Chimbote</h3>
+        <p class="map-address">Av. Francisco Bolognesi 736, 2do piso, Chimbote</p>
+        <p class="map-ref">Ref: Frente a la fabrica y al costado de la Caja Trujillo</p>
+        <div class="map-schedule-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Lunes a viernes: 5:00 AM — 2:00 PM
+        </div>
+        <div class="map-schedule-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Sabados: 5:00 AM — 10:30 AM
+        </div>
+      </div>
+      <div class="map-embed reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.8!2d-78.5093!3d-9.0747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDQnMjkuMCJTIDc4wrAzMCczMy41Ilc!5e0!3m2!1ses!2spe!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 13: FINAL CTA
+     ============================================ -->
+<section class="final-cta">
+  <h2 class="reveal">EMPIEZA HOY TU CAMBIO</h2>
+  <p class="reveal">Vacantes limitadas. No esperes mas — tu futuro empieza con un mensaje.</p>
+  <a href="https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork" target="_blank" class="final-cta-btn reveal">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Postula por WhatsApp
+  </a>
+</section>
+
+<!-- ============================================
+     SECTION 14: FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Datawork">
+        <span class="footer-logo-text"><span class="data">DATA</span><span class="work">WORK</span></span>
+      </div>
+      <p class="footer-tagline">Conecta con tu futuro. Empieza hoy en Datawork.</p>
+    </div>
+    <div>
+      <h4>Navegacion</h4>
+      <div class="footer-links">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#oferta">Oferta laboral</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#calculadora">Calculadora</a>
+      </div>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <a href="https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork" target="_blank">+51 993 972 701</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Av. Francisco Bolognesi 736, 2do piso, Chimbote<br><small>Ref: Frente a la fabrica y al costado de la Caja Trujillo</small></span>
+      </div>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <div class="footer-links">
+        <span style="font-size:14px;color:var(--gray-500)">L-V: 5:00 AM — 2:00 PM</span>
+        <span style="font-size:14px;color:var(--gray-500)">Sab: 5:00 AM — 10:30 AM</span>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/dataworkperu" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Datawork. Todos los derechos reservados.
+  </div>
+</footer>
+
+<!-- ============================================
+     SECTION 15: CHATBOT
+     ============================================ -->
+<button class="chat-trigger" id="chatTrigger" aria-label="Abrir chat">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header">
+    <img src="logo.png" alt="Datawork">
+    <div class="chat-header-info">
+      <div class="chat-header-title"><span class="data">DATA</span><span class="work">WORK</span></div>
+      <div class="chat-header-sub">Asistente de RRHH</div>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Cerrar chat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-input-area">
+    <input type="text" class="chat-input" id="chatInput" placeholder="Escribe tu mensaje..." autocomplete="off">
+    <button class="chat-send" id="chatSend" aria-label="Enviar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  /* ========== WHATSAPP URL ========== */
+  const WA_URL = 'https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork';
+  const SHEET_URL = 'INSERTAR_GOOGLE_APPS_SCRIPT_URL';
+
+  /* ========== MOBILE MENU ========== */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ========== SMOOTH SCROLL ========== */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  /* ========== SCROLL REVEAL (IntersectionObserver) ========== */
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Find siblings for stagger
+        const parent = entry.target.parentElement;
+        const siblings = Array.from(parent.querySelectorAll('.reveal'));
+        const idx = siblings.indexOf(entry.target);
+        const delay = idx >= 0 ? idx * 80 : 0;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  /* ========== ANIMATED STAT COUNTERS ========== */
+  const statNumbers = document.querySelectorAll('.stat-number');
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        let current = 0;
+        const increment = Math.max(1, Math.ceil(target / 60));
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = prefix + current.toLocaleString() + suffix;
+        }, 25);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  statNumbers.forEach(el => countObserver.observe(el));
+
+  /* ========== COMMISSION CALCULATOR ========== */
+  const calcSlider = document.getElementById('calcSlider');
+  const calcVentas = document.getElementById('calcVentas');
+  const calcBase = document.getElementById('calcBase');
+  const calcPunt = document.getElementById('calcPunt');
+  const calcProd = document.getElementById('calcProd');
+  const calcComm = document.getElementById('calcComm');
+  const calcTotal = document.getElementById('calcTotal');
+
+  function updateCalc() {
+    const ventas = parseInt(calcSlider.value);
+    calcVentas.textContent = ventas;
+    const base = 1250;
+    const puntualidad = 100;
+    const productividad = 100;
+    let comisiones = 0;
+
+    if (ventas > 40) {
+      // First 20: 0, 21-30: S/10 each = S/100, 31-40: S/15 each = S/150, 41+: S/20 each
+      comisiones = (10 * 10) + (10 * 15) + ((ventas - 40) * 20);
+    } else if (ventas > 30) {
+      comisiones = (10 * 10) + ((ventas - 30) * 15);
+    } else if (ventas > 20) {
+      comisiones = (ventas - 20) * 10;
+    }
+
+    const total = base + puntualidad + productividad + comisiones;
+
+    calcBase.textContent = 'S/' + base.toLocaleString();
+    calcPunt.textContent = 'S/' + puntualidad.toLocaleString();
+    calcProd.textContent = 'S/' + productividad.toLocaleString();
+    calcComm.textContent = 'S/' + comisiones.toLocaleString();
+    calcTotal.textContent = 'S/' + total.toLocaleString();
+  }
+  calcSlider.addEventListener('input', updateCalc);
+  updateCalc();
+
+  /* ========== CHATBOT ========== */
+  const chatTrigger = document.getElementById('chatTrigger');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatClose = document.getElementById('chatClose');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+
+  let chatOpen = false;
+  let chatHistory = [];
+  let chatInitialized = false;
+
+  const SYSTEM_PROMPT = `Eres el asistente de Recursos Humanos de DATAWORK, un call center ubicado en Chimbote, Peru. Tu rol es atender candidatos interesados en la vacante de Asesor Comercial.
+
+INFORMACION DE LA VACANTE:
+- Puesto: Asesor Comercial — Call Center
+- Modalidad: 100% presencial
+- Horario: Lunes a viernes 5:00 AM a 2:00 PM, Sabados 5:00 AM a 10:30 AM. Horario FIJO, nunca rotativo. Tardes libres.
+- Sueldo base: S/1,250 mensual
+- Bono puntualidad: S/100 (por cumplimiento de horario)
+- Bono productividad: S/100 (por cumplimiento de metas)
+- Total fijo garantizado: S/1,450
+- Comisiones ilimitadas por tramos:
+  * Primeras 20 ventas: sin comision (cubiertas por sueldo base + bonos)
+  * Ventas 21-30: S/10 por venta (Level 1)
+  * Ventas 31-40: S/15 por venta (Level 2)
+  * Ventas 41+: S/20 por venta (Level Pro, sin tope)
+- Capacitacion: 5 dias, 7:00 AM a 1:00 PM, incluye break de 30 min, es PAGADA. Especializada en normativa del sector energetico.
+- Requisitos: Actitud positiva, comunicacion, compromiso, responsabilidad. NO se requiere experiencia previa.
+- Funciones: Contactar clientes en Espana, ofrecer servicios de luz y gas, gestionar objeciones, registrar informacion, cumplir KPIs.
+- La empresa proporciona: computadora, sistema de llamadas, base de datos.
+- Ubicacion: Av. Francisco Bolognesi 736, 2do piso, Chimbote. Ref: Frente a la fabrica y al costado de la Caja Trujillo.
+- Beneficios adicionales: Contrato en planilla, linea de carrera, buen clima laboral.
+
+REGLAS DE COMPORTAMIENTO:
+1. Responde SIEMPRE en espanol, de forma breve (3-4 oraciones maximo).
+2. Se profesional pero calido y motivador.
+3. Si el candidato quiere postular, recopila estos 5 datos uno por uno:
+   a) Nombre completo
+   b) Edad
+   c) Numero de contacto
+   d) Experiencia en ventas o call center (Si/No)
+   e) Disponibilidad para horario de manana (Si/No)
+4. Despues de recopilar todos los datos, agenda una entrevista presencial.
+   - Entrevistas SOLO de lunes a viernes, 9:00 AM a 2:00 PM. NUNCA fines de semana.
+   - Sugiere la proxima fecha disponible.
+   - Indica que traiga: DNI fisico + Certificado Unico Laboral.
+   - Direccion con referencia.
+5. Al confirmar la entrevista, incluye exactamente este tag (NO lo muestres al usuario):
+   [AGENDAR]nombre|telefono|edad|experiencia|fecha_hora[/AGENDAR]
+   Seguido de un mensaje de confirmacion visible.
+6. Si el candidato no cumple condiciones (ej: no puede trabajar en manana), agradece amablemente y menciona que puede ser considerado para futuras oportunidades.
+7. Si no hay respuesta o duda, recuerda que los cupos son limitados para generar urgencia.
+8. WhatsApp de contacto: +51 993 972 701
+9. Para coordinar mejor, ofrece derivar al canal de WhatsApp: https://api.whatsapp.com/send?phone=+51993972701&text=Hola%2C%20me%20interesa%20la%20vacante%20de%20Asesor%20Comercial%20en%20Datawork`;
+
+  function toggleChat() {
+    chatOpen = !chatOpen;
+    chatPanel.classList.toggle('active', chatOpen);
+    if (chatOpen && !chatInitialized) {
+      chatInitialized = true;
+      addBotMessage('¡Hola! 👋 Soy el asistente de Recursos Humanos de Datawork. ¿Te interesa la vacante de Asesor Comercial? Preguntame sobre el sueldo, horarios, beneficios o postula directamente aqui.', true);
+    }
+    if (chatOpen) chatInput.focus();
+  }
+
+  chatTrigger.addEventListener('click', toggleChat);
+  chatClose.addEventListener('click', toggleChat);
+
+  function addBotMessage(text, withOptions) {
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg bot';
+    msg.innerHTML = text.replace(/\n/g, '<br>');
+    chatMessages.appendChild(msg);
+    if (withOptions) {
+      const opts = document.createElement('div');
+      opts.className = 'chat-options';
+      opts.innerHTML = `
+        <button class="chat-option-btn" data-msg="Quiero ver informacion del puesto">Ver informacion del puesto</button>
+        <button class="chat-option-btn" data-msg="Quiero postular ahora">Postular ahora</button>
+      `;
+      chatMessages.appendChild(opts);
+      opts.querySelectorAll('.chat-option-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          opts.remove();
+          sendMessage(btn.dataset.msg);
+        });
+      });
+    }
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg user';
+    msg.textContent = text;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function addSystemMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg system';
+    msg.textContent = text;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function showTyping() {
+    const typing = document.createElement('div');
+    typing.className = 'typing-indicator';
+    typing.id = 'typingIndicator';
+    typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+    chatMessages.appendChild(typing);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function hideTyping() {
+    const t = document.getElementById('typingIndicator');
+    if (t) t.remove();
+  }
+
+  async function sendMessage(text) {
+    if (!text.trim()) return;
+    addUserMessage(text);
+    chatHistory.push({ role: 'user', content: text });
+    chatInput.value = '';
+    showTyping();
+
+    try {
+      const res = await fetch('/.netlify/functions/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: chatHistory, system: SYSTEM_PROMPT })
+      });
+      const data = await res.json();
+      hideTyping();
+
+      if (data.error) {
+        addBotMessage('Lo siento, hubo un error. Por favor intenta de nuevo o escribenos por WhatsApp: <a href="' + WA_URL + '" target="_blank">+51 993 972 701</a>');
+        return;
+      }
+
+      let reply = data.content || data.text || '';
+      chatHistory.push({ role: 'assistant', content: reply });
+
+      // Check for [AGENDAR] tag
+      const agendarMatch = reply.match(/\[AGENDAR\](.*?)\[\/AGENDAR\]/);
+      if (agendarMatch) {
+        const parts = agendarMatch[1].split('|');
+        const appData = {
+          nombre: parts[0] || '',
+          telefono: parts[1] || '',
+          edad: parts[2] || '',
+          experiencia: parts[3] || '',
+          fecha_hora: parts[4] || ''
+        };
+        // Send to Google Sheets
+        if (SHEET_URL !== 'INSERTAR_GOOGLE_APPS_SCRIPT_URL') {
+          fetch(SHEET_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(appData)
+          }).catch(() => {});
+        }
+        // Remove tag from visible message
+        reply = reply.replace(/\[AGENDAR\].*?\[\/AGENDAR\]/g, '').trim();
+        addBotMessage(reply);
+        addSystemMessage('Tu postulacion ha sido registrada. El equipo de RRHH te contactara a la brevedad.');
+      } else {
+        addBotMessage(reply);
+      }
+    } catch (err) {
+      hideTyping();
+      addBotMessage('Lo siento, no pude conectar. Escribenos directamente por <a href="' + WA_URL + '" target="_blank">WhatsApp</a>.');
+    }
+  }
+
+  chatSend.addEventListener('click', () => sendMessage(chatInput.value));
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') sendMessage(chatInput.value);
+  });
+
+})();
+</script>
+</body>
+</html>
