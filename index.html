@@ -261,9 +261,9 @@ ul { list-style: none; }
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
-  align-items: end;
+  grid-template-columns: 1.2fr auto auto;
+  gap: 24px;
+  align-items: center;
   position: relative;
   z-index: 2;
   width: 100%;
@@ -344,26 +344,40 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
 }
-/* Floating benefit pills over hero person */
+/* Floating benefit pills — positioned left of Santiago */
 .hero-pills {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  pointer-events: none;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  align-self: center;
 }
 .hero-pill {
-  position: absolute;
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(13, 27, 48, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--card-border);
+  gap: 10px;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 102, 255, 0.25);
   border-radius: 12px;
-  padding: 10px 16px;
+  padding: 12px 16px;
   white-space: nowrap;
-  animation: pillFloat 4s ease-in-out infinite;
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.15);
+  opacity: 0;
+  animation: badgeFloat 0.6s ease-out forwards, badgePulse 3s ease-in-out infinite;
+}
+.hero-pill:nth-child(1) { animation-delay: 0.2s, 0.8s; }
+.hero-pill:nth-child(2) { animation-delay: 0.4s, 1.0s; }
+.hero-pill:nth-child(3) { animation-delay: 0.6s, 1.2s; }
+.hero-pill:nth-child(4) { animation-delay: 0.8s, 1.4s; }
+@keyframes badgeFloat {
+  0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes badgePulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 .hero-pill-icon {
   width: 32px;
@@ -378,23 +392,16 @@ ul { list-style: none; }
 .hero-pill-icon svg { width: 16px; height: 16px; }
 .hero-pill-label {
   font-size: 11px;
-  color: var(--gray-400);
+  color: #94A3B8;
+  text-transform: uppercase;
   line-height: 1;
 }
 .hero-pill-value {
   font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--white);
   line-height: 1.2;
-}
-.hero-pill:nth-child(1) { top: 10%; left: -20px; animation-delay: 0s; }
-.hero-pill:nth-child(2) { top: 35%; right: -30px; left: auto; animation-delay: 1s; }
-.hero-pill:nth-child(3) { bottom: 25%; left: -30px; animation-delay: 2s; }
-.hero-pill:nth-child(4) { bottom: 45%; right: -20px; left: auto; animation-delay: 0.5s; }
-@keyframes pillFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
 }
 
 /* ============================================
@@ -1379,10 +1386,10 @@ input[type="range"]::-moz-range-thumb {
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
-  .hero-content { grid-template-columns: 1fr; gap: 20px; }
+  .hero-content { grid-template-columns: 1fr; gap: 24px; }
+  .hero-pills { flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center; }
   .hero-right { justify-content: center; }
   .hero-person { max-height: 380px; }
-  .hero-pill { display: none; }
   .benefits-grid, .funciones-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .map-container { grid-template-columns: 1fr; }
@@ -1398,7 +1405,10 @@ input[type="range"]::-moz-range-thumb {
   .hero h1 { font-size: 32px; }
   .hero-subtitle { font-size: 16px; }
   .hero-person { max-height: 300px; }
-  .hero-pill { display: none; }
+  .hero-pills { flex-direction: row; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .hero-pill { padding: 8px 12px; }
+  .hero-pill-value { font-size: 13px; }
+  .hero-pill-label { font-size: 10px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .stat-number { font-size: 32px; }
   .section-light, .section-white, .section-dark { padding: 60px 20px; }
@@ -1490,26 +1500,26 @@ input[type="range"]::-moz-range-thumb {
         Postula por WhatsApp
       </a>
     </div>
+    <div class="hero-pills">
+      <div class="hero-pill">
+        <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div><div class="hero-pill-label">Sueldo base</div><div class="hero-pill-value">S/1,250</div></div>
+      </div>
+      <div class="hero-pill">
+        <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><div class="hero-pill-label">Horario</div><div class="hero-pill-value">Ma&#241;anas</div></div>
+      </div>
+      <div class="hero-pill">
+        <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+        <div><div class="hero-pill-label">Capacitaci&#243;n</div><div class="hero-pill-value">Pagada</div></div>
+      </div>
+      <div class="hero-pill">
+        <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div><div class="hero-pill-label">Comisiones</div><div class="hero-pill-value">Ilimitadas</div></div>
+      </div>
+    </div>
     <div class="hero-right reveal">
       <img src="santiago.png" alt="Miembro del equipo Datawork" class="hero-person">
-      <div class="hero-pills">
-        <div class="hero-pill">
-          <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-          <div><div class="hero-pill-label">Sueldo base</div><div class="hero-pill-value">S/1,250</div></div>
-        </div>
-        <div class="hero-pill">
-          <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div><div class="hero-pill-label">Horario</div><div class="hero-pill-value">Mananas</div></div>
-        </div>
-        <div class="hero-pill">
-          <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-          <div><div class="hero-pill-label">Capacitacion</div><div class="hero-pill-value">Pagada</div></div>
-        </div>
-        <div class="hero-pill">
-          <div class="hero-pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-          <div><div class="hero-pill-label">Comisiones</div><div class="hero-pill-value">Ilimitadas</div></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1533,7 +1543,7 @@ input[type="range"]::-moz-range-thumb {
     </div>
     <div class="stat-item reveal">
       <div class="stat-number" data-target="100" data-suffix="%">0</div>
-      <div class="stat-label">Capacitacion pagada</div>
+      <div class="stat-label">Capacitaci&#243;n pagada</div>
     </div>
   </div>
 </section>
